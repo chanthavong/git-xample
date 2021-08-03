@@ -10,4 +10,8 @@
     })
     console.log(u)
 
+    # result
+   [{ id: 1,
+    name: "mark"}]
+
 ```
