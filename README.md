@@ -30,5 +30,5 @@ const users = {
   },
 };
 console.log(CollapseLib.collapseDict(users));
-// output {id: 2, name: "j", phone: "66 4433", address: "Vte, 12R"}
+// output {id: 1, name: "mark", phone: "66 4433", address: "Vte, 12R"}
 ```
