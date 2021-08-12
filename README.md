@@ -1,4 +1,5 @@
-```bash
+## javascript filter
+```javascript
 
     const users = [
       {id:1,name:'mark'},
@@ -14,4 +15,22 @@
    [{ id: 1,
     name: "mark"}]
 
+```
+
+## collap Object
+
+```javascript
+const users = [
+  {
+    id: 1,
+    name: "mark",
+    detail: {
+      phone: "66 4433",
+      address: "Vte, 12R",
+    },
+  },
+  { id: 2, name: "j" },
+];
+console.log(CollapseLib.collapseDict(users));
+// output {id: 2, name: "j", phone: "66 4433", address: "Vte, 12R"}
 ```
