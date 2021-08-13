@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = [{
+            "prov_lo": "ຂ. ຜົ້ງ​ສາ​ລີ",
+            "prov_en": "Phongsaly"
+        }, {
+            "prov_lo": "ຂ. ຫຼວງ​ນ້ຳ​ທາ",
+            "prov_en": "Luangnamtha"
+        }, {
+            "prov_lo": "ຂ. ອຸ​ດົມ​ໄຊ",
+            "prov_en": "Oudomxay"
+        }, {
+            "prov_lo": "ຂ. ຫຼວງ​ພະ​ບາງ",
+            "prov_en": "Luangprabang"
+        }, {
+            "prov_lo": "​ຂ. ຫົວ​ພັນ",
+            "prov_en": "Huaphanh"
+        }, {
+            "prov_lo": "ຂ. ສະ​ຫວັນ​ນະ​ເຂດ",
+            "prov_en": "Savannakhet"
+        }, {
+            "prov_lo": "ນະຄອນຫຼວງວຽງຈັນ (Not target)",
+            "prov_en": "Vientiane Capital (Not target)"
+        }, {
+            "prov_lo": "ຂ. ບໍ່​ແກ້ວ",
+            "prov_en": "Bokeo"
+        }, {
+            "prov_lo": "ຂ. ໄຊ​ຍະ​ບູ​ລີ",
+            "prov_en": "Xayabury"
+        }, {
+            "prov_lo": "ຂ. ວຽງ​ຈັນ",
+            "prov_en": "Vientiane"
+        }, {
+            "prov_lo": "ຂ. ບໍ​ລິ​ຄຳ​ໄຊ",
+            "prov_en": "Borikhamxay"
+        }, {
+            "prov_lo": "​​ຂ. ຄຳ​ມ່ວນ",
+            "prov_en": "Khammuane"
+        }, {
+            "prov_lo": "ຂ. ຈຳ​ປາ​ສັກ",
+            "prov_en": "Champasack"
+        }, {
+            "prov_lo": "ຂ. ໄຊ​ສົມ​ບູນ",
+            "prov_en": "Saysomboun"
+        }, {
+            "prov_lo": "ຂ. ສາ​ລະ​ວັນ",
+            "prov_en": "Saravane"
+        }, {
+            "prov_lo": "ຂ. ເຊກອງ",
+            "prov_en": "Sekong"
+        }, {
+            "prov_lo": "ຂ. ອັດ​ຕະ​ປື",
+            "prov_en": "Attapeu"
+        }, {
+            "prov_lo": "ຂ. ຊຽງ​ຂວາງ",
+            "prov_en": "Xiengkhuang"
+        }]
+
+
+        Array.prototype.sortBy = function(p) {
+            return this.slice(0).sort(function(a, b) {
+                return (a[p] > b[p]) ? 1 : (a[p] < b[p]) ? -1 : 0;
+            });
+        }
+
+        function compare(a, b) {
+            if (a.prov_lo < b.prov_lo) {
+                return -1;
+            }
+            if (a.prov_lo > b.prov_lo) {
+                return 1;
+            }
+            return 0;
+        }
+        // console.log(x.sort((a, b) => (a.prov_lo.toLowerCase() == b.prov_lo.toLowerCase() ? 1 : -1)))
+        console.log(x.sort((a, b) => (a.prov_en.localeCompare(b.prov_en))))
+            // console.log(x.sortBy('prov_lo'))
+
+        var y = [
+            'a', 'c', 'd', 'b', 2
+        ]
+
+        console.log(y)
+        console.log(y.sort())
+    </script>
+</body>
+
+</html>
