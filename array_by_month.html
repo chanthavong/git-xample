@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var data = [{
+        "id": "5096d58d-cd05-4540-98b5-4b5a2ed04cfe",
+        "on_date": "2021-08-19",
+        "meta_id": "baafa244-80f2-4211-9943-5e2eb2e6ad13",
+        "qty": 1,
+        "price": 40000
+      },
+      {
+        "id": "12a775cc-23de-4889-bc63-48a433921302",
+        "on_date": "2021-09-20",
+        "meta_id": "baafa244-80f2-4211-9943-5e2eb2e6ad13",
+        "qty": 2,
+        "price": 2000
+      },
+      {
+        "id": "46161317-c6a3-43a4-82f3-701978ef49a5",
+        "on_date": "2021-09-20",
+        "meta_id": "8baa0cc6-4e23-46ea-8d91-fc39d950dc35",
+        "qty": 1,
+        "price": 0
+      }
+    ]
+
+    var list = [];
+    for (i = 0; i < data.length; i++) {
+      var dates = data[i].on_date;
+      var mth = new Date(data[i].on_date).toISOString().substring(0,7);
+
+      if (!list[mth]) {
+        list[mth] = [];
+      }
+
+      list[mth].push({
+        data: data[i],
+        date: data[i].on_date
+      });
+    }
+
+    console.log(list)
+  </script>
+</body>
+
+</html>
